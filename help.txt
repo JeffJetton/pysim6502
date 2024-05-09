@@ -1,0 +1,45 @@
+Python 6502 Simulator Help File (commands are case-insensitive)
+
+HELP     View this file.  Aliases: H, MAN, ?
+
+START    Start or continue simulating system from current program counter (PC)
+         Optionally pass 1-4 hexadecimal digits to set PC and then start
+         (While running, use control-E to halt cpu and exit to sim prompt)
+         Aliases: GO, RUN, G, R        Example: START E000
+         
+STEP     Simulate one full CPU instruction, then return to prompt, or pass a
+         numeric argument to run multiple steps before returning.  Alias: S
+
+RESET    Reset system and start.  (Use control-R to reset while sim is running)
+
+BUS      View "bus" information (current system configuration).  Alias: B
+
+CPU      View current CPU state.  Alias: C
+
+PC       View current program counter address, or pass 1-4 hex digits to set
+
+E XXXX   Examine value stored at address XXXX (1-4 hexadecimal digits)
+         Pass two addresses, separated by whitespace, to examine a range
+         Aliases:  EXAMINE, EXAM, EX
+         Examples: E FF1F
+                   ex 2C0 2DF
+
+D XXXX   Deposit one or more 8-bit hex values starting at hex address XXXX
+         Separate values with whitespace.
+         Aliases:  DEPOSIT, DEP, DE, DP
+         Examples: D 0100 A9
+                   d 106 E8 8a 4c 2 0
+
+BREAK    View current CPU breakpoints, or pass one or more hex addresses to
+         add or remove existing breakpoint(s).
+         Aliases: BRK, BR
+         Example: BREAK E000 FFFC FF00
+
+CLEAR    Clear all breakpoints.  Alias: CLR
+
+
+TOGGLE   Change whether address memory errors are thrown or ignored
+         Aliases: ERROR, ERR, MEMORY, MEM, TOG
+
+QUIT     Quit program from simulator prompt.  Aliases: EXIT, BYE
+
