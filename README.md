@@ -14,7 +14,7 @@ Type `help` at the `sim>` prompt to learn more.
 
 ### Example of Use
 
-Run the `sim.py` file to start. Try entering `bus` to view details of the Bus object currently being used by the CPU":
+Run the `sim.py` file to start. Try entering `bus` to view details of the Bus object currently being used by the CPU:
 
     python sim.py
     sim> bus
